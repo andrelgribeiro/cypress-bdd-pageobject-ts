@@ -1,0 +1,58 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Login to Application",
+    "line": 1,
+    "id": "login-to-application",
+    "tags": [],
+    "uri": "login.feature",
+    "elements": [
+      {
+        "id": "login-to-application;valid-login",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Valid Login",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the sistem",
+            "result": {
+              "status": "passed",
+              "duration": 20388000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I submit login with 'standard_user@mailinator.com' and 'secret_123'",
+            "result": {
+              "status": "passed",
+              "duration": 11295000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see my user 'Standard'",
+            "result": {
+              "status": "failed",
+              "duration": 7761000000,
+              "error_message": "AssertionError: expected 'Bem-vindo!!' to include 'Standard'\n    at Context.eval (https://www.espn.com/__cypress/tests?p=cypress/integration/login.feature:67:33)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

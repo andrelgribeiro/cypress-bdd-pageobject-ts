@@ -1,0 +1,35 @@
+{
+  "name": "cypress-bdd-pageobject-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome",
+    "cy:update-snapshots": "cypress run --env updateSnapshots=true",
+    "cy:report": "node ./cypress/report.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.2.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^18.3.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-iframe": "^1.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepsDefinitions": "cypress/integration/",
+    "cucumberJson": {
+      "generate": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algribeiro/cypress-bdd-pageobject-ts"
+  }
+}
