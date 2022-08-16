@@ -1,0 +1,77 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "SignUp to Application",
+    "line": 1,
+    "id": "signup-to-application",
+    "tags": [],
+    "uri": "signup.feature",
+    "elements": [
+      {
+        "id": "signup-to-application;valid-signup-with-successfull",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Valid signup with successfull",
+        "tags": [
+          {
+            "name": "@signup",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have a new user to create",
+            "result": {
+              "status": "passed",
+              "duration": 674000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I open the sistem",
+            "result": {
+              "status": "passed",
+              "duration": 25654000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I access the signup form",
+            "result": {
+              "status": "passed",
+              "duration": 13287000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I fill all fields correctly and click on Register button",
+            "result": {
+              "status": "passed",
+              "duration": 37521000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should see the confirmation",
+            "result": {
+              "status": "passed",
+              "duration": 864000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

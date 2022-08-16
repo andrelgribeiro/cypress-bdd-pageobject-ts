@@ -1,34 +1,34 @@
-const USER_NAME = 'input[type="email"]'
-const USER_PASSWORD = 'input[type="password"]'
+const USER_FIRST_NAME = 'input[name="firstName"]'
+const USER_LAST_NAME = 'input[name="lastName"]'
+const USER_EMAIL = 'input[name="email"]'
+const USER_PASSWORD = 'input[name="newPassword"]'
 const SUBMIT_BUTTON = 'button.btn'
 const ERROR_LABEL = '.banner[role="alert"]'
 const IFRAME_LOGIN = '#disneyid-iframe'
-const BTN_REGISTER = '[did-translate="login.label.CREATE_ACCOUNT"]'
-const FORM_LOGIN = '#did-ui-view'
 
 import HomePage from '../pageObjects/HomePage'
 import 'cypress-iframe';
 
 
 
-class LoginPage {
-    static fillUsername(name){
-        cy.iframe(IFRAME_LOGIN).find(USER_NAME, { timeout: 9000 }).type(name)
+class SignupPage {
+    static fillFirstName(name){
+        cy.iframe(IFRAME_LOGIN).find(USER_FIRST_NAME, { timeout: 9000 }).type(name)
     }
+    static fillLastName(name){
+        cy.iframe(IFRAME_LOGIN).find(USER_LAST_NAME, { timeout: 5000 }).type(name)
+    }
+    static fillEmail(email){
+        cy.iframe(IFRAME_LOGIN).find(USER_EMAIL, { timeout: 5000 }).type(email)
+    }    
     static fillPassword(password){
         cy.iframe(IFRAME_LOGIN).find(USER_PASSWORD, { timeout: 5000 }).type(password)
     }
     static clickSubmit(){
         cy.iframe(IFRAME_LOGIN).find(SUBMIT_BUTTON, { timeout: 5000 }).click({ timeout: 5000 })
     }
-    static clickRegister(){
-        cy.iframe(IFRAME_LOGIN).find(BTN_REGISTER, { timeout: 5000 }).click({ timeout: 5000 })
-    }    
     static validadeErrorLabel(){
         cy.iframe(IFRAME_LOGIN).find(ERROR_LABEL).should('be.visible')
-    }
-    static isFormLoginVisible(){
-        cy.iframe(IFRAME_LOGIN).find(FORM_LOGIN).should('be.visible')
     }
     static openLoginPage(){
         HomePage.openUserArea()
@@ -36,4 +36,4 @@ class LoginPage {
     }
 }
 
-export default LoginPage
+export default SignupPage

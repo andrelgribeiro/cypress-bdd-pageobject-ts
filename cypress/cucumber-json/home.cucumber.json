@@ -1,0 +1,57 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Home Application",
+    "line": 1,
+    "id": "home-application",
+    "tags": [],
+    "uri": "home.feature",
+    "elements": [
+      {
+        "id": "home-application;valid-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Valid Login",
+        "tags": [
+          {
+            "name": "@home",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the sistem",
+            "result": {
+              "status": "passed",
+              "duration": 18356000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search something in the page",
+            "result": {
+              "status": "passed",
+              "duration": 13334000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see my search parameter",
+            "result": {
+              "status": "passed",
+              "duration": 185000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
